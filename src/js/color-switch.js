@@ -23,8 +23,7 @@ stopButton.addEventListener('click', onStopClick);
 
 function onStartClick() {
     timerId = setInterval(() => {
-        const randomColor = randomIntegerFromInterval(0, colors.length - 1);
-        bodyEl.style.backgroundColor = colors[randomColor];
+        bodyEl.style.backgroundColor = colors[randomIntegerFromInterval(0, colors.length - 1)];
         startButton.removeEventListener('click', onStartClick);
     }, 1000)
 }
